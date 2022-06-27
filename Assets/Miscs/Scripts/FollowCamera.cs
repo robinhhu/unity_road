@@ -6,7 +6,7 @@ public class FollowCamera : MonoBehaviour {
     public float damping = 4f;
     public Transform target;
     public float distance = 9f;
-    public float height = 3f;
+    public float height = 2f;
 
     private Vector3 cameraPosition;
     private Vector3 newFollowPosition;
@@ -20,7 +20,7 @@ public class FollowCamera : MonoBehaviour {
         if (!target)
             return;
 
-        cameraPosition = new Vector3(0, -height, distance);
+        cameraPosition = new Vector3(-distance, -height, -distance/2);
         newFollowPosition = target.position - cameraPosition;
         transform.position = Vector3.Slerp(transform.position, newFollowPosition, damping);
 	}

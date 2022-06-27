@@ -69,7 +69,7 @@ public class RoadGenerator : MonoBehaviour {
 		if (indexOfCurrentChunk > 0)
 		{
 			float _distance = Vector3.Distance(player.position, (chunks.ToArray()[indexOfCurrentChunk - 1]).position);
-			if(_distance > (chunkLength * .75f))
+			if(_distance > (chunkLength * 1.0f))
 				SweepPreviousChunk();
 		}
 
